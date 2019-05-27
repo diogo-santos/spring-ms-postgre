@@ -3,7 +3,7 @@
 Demo project for RESTful Spring Boot with PostgreSQL
 
 ## What you'll need
-PostgreSQL @see: application.properties
+PostgreSQL
 
 Java 1.8
 

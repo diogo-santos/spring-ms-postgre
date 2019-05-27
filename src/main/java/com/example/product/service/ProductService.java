@@ -1,6 +1,6 @@
-package com.example.postgresql.service;
+package com.example.product.service;
 
-import com.example.postgresql.dto.ProductDto;
+import com.example.product.dto.ProductDto;
 
 import java.util.List;
 

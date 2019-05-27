@@ -1,9 +1,9 @@
-package com.example.postgresql.service;
+package com.example.product.service;
 
-import com.example.postgresql.converter.ProductDomainToDto;
-import com.example.postgresql.domain.Product;
-import com.example.postgresql.dto.ProductDto;
-import com.example.postgresql.repo.ProductRepository;
+import com.example.product.converter.ProductDomainToDto;
+import com.example.product.domain.Product;
+import com.example.product.dto.ProductDto;
+import com.example.product.repo.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -50,7 +50,7 @@ public class ProductServiceImpl implements ProductService {
     public void delete(Long id) {
         productRepository
                 .findById(id)
-                .orElseThrow(()->new NoSuchElementException("Product does not exist " + id));
+                .orElseThrow(()->new NoSuchElementException("Product does not exist: " + id));
         productRepository.deleteById(id);
     }
 }

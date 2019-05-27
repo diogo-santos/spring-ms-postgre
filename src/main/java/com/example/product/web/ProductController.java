@@ -1,10 +1,9 @@
-package com.example.postgresql.web;
+package com.example.product.web;
 
-import com.example.postgresql.dto.ProductDto;
-import com.example.postgresql.service.ProductService;
+import com.example.product.dto.ProductDto;
+import com.example.product.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
@@ -12,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.NoSuchElementException;
 
-@Controller
+@RestController
 public class ProductController {
     private ProductService productService;
 
@@ -21,12 +20,7 @@ public class ProductController {
         this.productService = productService;
     }
 
-    @RequestMapping("/")
-    public String redirToList(){
-        return "redirect:/product/list";
-    }
-
-    @RequestMapping(path = {"/product/list", "/product"}, method = RequestMethod.GET)
+    @RequestMapping(path = {"/product", "/product/list"}, method = RequestMethod.GET)
     @ResponseStatus(HttpStatus.OK)
     public List<ProductDto> listProducts(Model model){
         return productService.listAll();
@@ -34,8 +28,8 @@ public class ProductController {
 
     @RequestMapping(path = "/product/{id}", method = RequestMethod.GET)
     @ResponseStatus(HttpStatus.OK)
-    public ProductDto getProduct(@PathVariable String id){
-        return productService.getById(Long.valueOf(id));
+    public ProductDto getProduct(@PathVariable Long id){
+        return productService.getById(id);
     }
 
     @RequestMapping(path = "/product", method = RequestMethod.POST)
@@ -45,8 +39,8 @@ public class ProductController {
     }
 
     @RequestMapping(method = RequestMethod.DELETE, path = "product/{id}")
-    public void delete(@PathVariable String id){
-        productService.delete(Long.valueOf(id));
+    public void delete(@PathVariable Long id){
+        productService.delete(id);
     }
 
     @ResponseStatus(HttpStatus.NOT_FOUND)

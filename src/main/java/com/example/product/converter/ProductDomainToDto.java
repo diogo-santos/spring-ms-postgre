@@ -1,7 +1,7 @@
-package com.example.postgresql.converter;
+package com.example.product.converter;
 
-import com.example.postgresql.domain.Product;
-import com.example.postgresql.dto.ProductDto;
+import com.example.product.domain.Product;
+import com.example.product.dto.ProductDto;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.stereotype.Component;
 

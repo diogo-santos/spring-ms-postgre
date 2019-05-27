@@ -1,8 +1,7 @@
-package com.example.postgresql.repo;
+package com.example.product.repo;
 
-import com.example.postgresql.domain.Product;
+import com.example.product.domain.Product;
 import org.junit.Assert;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +10,6 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import java.math.BigDecimal;
 
-@Ignore
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest
 public class ProductRepositoryTest {
@@ -21,16 +19,16 @@ public class ProductRepositoryTest {
     private ProductRepository productRepository;
 
     @Test
-    public void testPersistence() {
-        //given
+    public void givenProductWhenSaveTest() {
         Product product = new Product();
         product.setDescription(PRODUCT_DESCRIPTION);
         product.setPrice(BIG_DECIMAL_100);
-        //when
+
         productRepository.save(product);
-        //then
+
         Assert.assertNotNull(product.getId());
         Product newProduct = productRepository.findById(product.getId()).orElse(null);
+        Assert.assertNotNull(newProduct);
         Assert.assertEquals((Long) 1L, newProduct.getId());
         Assert.assertEquals(PRODUCT_DESCRIPTION, newProduct.getDescription());
         Assert.assertEquals(BIG_DECIMAL_100.compareTo(newProduct.getPrice()), 0);
