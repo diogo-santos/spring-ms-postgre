@@ -3,12 +3,12 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.exemple.postgre</groupId>
-	<artifactId>spring-ms-postgre</artifactId>
+	<groupId>com.exemple.postgresql</groupId>
+	<artifactId>spring-ms-postgresql</artifactId>
 	<version>0.0.1</version>
 	<packaging>jar</packaging>
 
-	<name>spring-ms-postgre</name>
+	<name>spring-ms-postgresql</name>
 	<description>Demo project for Spring Boot Microservice and PostgreSQL</description>
 
 	<parent>

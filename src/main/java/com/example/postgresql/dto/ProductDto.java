@@ -1,4 +1,4 @@
-package com.example.postgre.dto;
+package com.example.postgresql.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

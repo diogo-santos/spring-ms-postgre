@@ -1,4 +1,4 @@
-package com.example.postgre;
+package com.example.postgresql;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

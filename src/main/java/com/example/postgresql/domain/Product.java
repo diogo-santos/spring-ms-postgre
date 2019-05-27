@@ -1,4 +1,4 @@
-package com.example.postgre.domain;
+package com.example.postgresql.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

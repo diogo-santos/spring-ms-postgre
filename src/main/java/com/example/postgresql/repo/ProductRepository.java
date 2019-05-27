@@ -1,6 +1,6 @@
-package com.example.postgre.repo;
+package com.example.postgresql.repo;
 
-import com.example.postgre.domain.Product;
+import com.example.postgresql.domain.Product;
 import org.springframework.data.repository.CrudRepository;
 
 public interface ProductRepository extends CrudRepository<Product, Long> {

@@ -1,7 +1,7 @@
-package com.example.postgre.web;
+package com.example.postgresql.web;
 
-import com.example.postgre.dto.ProductDto;
-import com.example.postgre.service.ProductService;
+import com.example.postgresql.dto.ProductDto;
+import com.example.postgresql.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
