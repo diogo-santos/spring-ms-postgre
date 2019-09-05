@@ -1,5 +1,4 @@
 # Spring Boot with PostgreSQL
-## What was build
 Demo project for RESTful Spring Boot with PostgreSQL
 
 ## What you'll need
